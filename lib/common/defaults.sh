@@ -251,6 +251,7 @@ kc_asdf_transfer() {
     return 1
   fi
 
+  kc_asdf_debug "$ns" "input type is %s" "$type"
   ## If input is file, the output should always contains filename
   ## example:
   ##   valid   : /tmp/test.txt /home/test.txt

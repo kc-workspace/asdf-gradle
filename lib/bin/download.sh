@@ -84,7 +84,7 @@ __asdf_bin() {
     kc_asdf_step "transfer" "$outpath" \
       kc_asdf_transfer "copy" "$tmppath" "$outpath" ||
       return 1
-    elif [[ "$mode" == "archive" ]]; then
+  elif [[ "$mode" == "archive" ]]; then
     outpath="$(kc_asdf_temp_dir)"
 
     kc_asdf_debug "$ns" "extracting '%s' to '%s'" \
@@ -97,7 +97,6 @@ __asdf_bin() {
     kc_asdf_step "transfer" "$outpath" \
       kc_asdf_transfer "move" "$tmppath" "$outpath" ||
       return 1
-    
   else
     kc_asdf_error "$ns" "invalid download mode name '%s'" "$mode"
     return 1
