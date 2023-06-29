@@ -1,0 +1,144 @@
+<h1 align="center">
+  asdf-gradle
+</h1>
+
+<!-- Description section -->
+<p align="center">
+  <strong>Accelerate java developer productivity</strong>
+</p>
+
+<!-- Badges section -->
+<p align="center">
+  <a href="https://github.com/kc-workspace/asdf-gradle/actions/workflows/main.yml">
+    <img
+      alt="github-main"
+      src="https://img.shields.io/github/actions/workflow/status/kc-workspace/asdf-gradle/main.yml?style=flat-square&logo=github">
+  </a>
+  <a href="https://github.com/kc-workspace/asdf-gradle/releases">
+    <img
+      alt="version"
+      src="https://img.shields.io/github/v/release/kc-workspace/asdf-gradle?style=flat-square&logo=github">
+  </a>
+  <a href="https://github.com/kc-workspace/asdf-gradle/commits/main">
+    <img
+      alt="version"
+      src="https://img.shields.io/github/last-commit/kc-workspace/asdf-gradle/main?style=flat-square&logo=github">
+  </a>
+</p>
+
+<!-- Links section -->
+<h3 align="center">
+  <a href="https://gradle.org/">gradle</a>
+  <span> · </span>
+  <a href="https://asdf-vm.com">asdf</a>
+</h3>
+
+> This is an asdf-vm plugin generated from [template][template-gh].
+
+## Before start
+
+> If you still see this section, mean this plugin is not ready yet
+
+There are several things template cannot generate for you,
+below are a list of thing we should do:
+
+1. make sure that your GitHub repository already exist at [kc-workspace/asdf-gradle][plugin-gh]
+2. please read [plugins create section][asdf-create-plugin] for more information
+3. remove `before start` section once you completed
+
+## Install
+
+Plugin:
+
+```sh
+asdf plugin add "gradle" "https://github.com/kc-workspace/asdf-gradle.git"
+```
+
+App:
+
+```sh
+# Show all installable versions
+asdf list all gradle
+
+# Install latest version
+asdf install gradle latest
+
+# Set a version globally
+asdf global gradle latest
+# Set a version locally
+asdf local gradle latest
+
+# Now gradle commands are available
+gradle
+```
+
+Check the [asdf][asdf-link] readme for instructions on
+how to install & manage versions.
+
+## Features
+
+Plugins generated from asdf-plugin-template repository will
+contains several extra features for every user including all below.
+
+- `$DEBUG=<any-string>` to enabled debug mode
+- `$ASDF_INSECURE=<any-string>` to disable security features (e.g. checksum)
+- `$ASDF_NO_CHECK=<any-string>` to disable pre-check features (e.g. check-cmd)
+- `$ASDF_OVERRIDE_OS=<os>` to override os name
+- `$ASDF_OVERRIDE_ARCH=<arch>` to override arch name
+- `$GITHUB_TOKEN=<token>` to pass github token on http request
+- `$ASDF_LOG_FORMAT=<format>` to custom log format, there are several variables
+  - **{datetime}** - for current datetime
+  - **{date}** - for current date
+  - **{time}** - for current time
+  - **{level}** - for log level (always be 3 characters uppercase)
+  - **{namespace}** - for formatted namespace (always have same lenght)
+  - **{ns}** - for raw namespace (no formatting applied)
+  - **{message}** - for log message
+
+### Addition Features
+
+The plugins might contains additional features
+in addition to default features above.
+You can take a look at [README.plugin.md][app-readme]
+
+## Contributors
+
+1. Only `bin/*` and `lib/utils.sh` are open for modify
+2. There several functions available on bin/* script [bin/README.md]
+3. The function defined on `lib/utils.sh` will be available everywhere
+4. New create `bin/*` script should use below template as starter
+
+```bash
+#!/usr/bin/env bash
+
+## <description>
+## https://asdf-vm.com/plugins/create.html
+
+## -----------------------
+## Customization functions
+
+kc_asdf_main() {
+  return 0
+}
+
+## -----------------------
+
+set -euo pipefail
+
+export KC_ASDF_PLUGIN_ENTRY_PATH=${BASH_SOURCE[0]}
+export KC_ASDF_PLUGIN_ENTRY_NAME
+KC_ASDF_PLUGIN_ENTRY_NAME="$(basename "$KC_ASDF_PLUGIN_ENTRY_PATH")"
+export KC_ASDF_PLUGIN_PATH
+KC_ASDF_PLUGIN_PATH=$(dirname "$(dirname "$KC_ASDF_PLUGIN_ENTRY_PATH")")
+
+# shellcheck source-path=SCRIPTDIR/../lib/commands.sh
+source "$KC_ASDF_PLUGIN_PATH/lib/commands.sh" "$@"
+```
+
+<!-- LINKS SECTION -->
+
+[app-readme]: ./README.plugin.md
+[plugin-gh]: https://github.com/kc-workspace/asdf-gradle
+[template-gh]: https://github.com/kc-workspace/asdf-plugin-template
+[asdf-link]: https://github.com/asdf-vm/asdf
+[asdf-create-plugin]: https://asdf-vm.com/plugins/create.html

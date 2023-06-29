@@ -1,0 +1,32 @@
+---
+## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v1.3.3-39-g47c7cc3
+_src_path: /Users/kamontat/Desktop/Personal/asdf-plugin-template
+app_desc: Accelerate java developer productivity
+app_name: gradle
+app_repo: https://github.com/gradle/gradle
+app_website: https://gradle.org/
+archive_conf_path: ''
+archive_conf_strip: 1
+archive_enabled: true
+archive_regex: (\.tar\.gz|\.tgz|\.zip)$
+checksum_conf_algorithm: 256
+checksum_enabled: true
+checksum_url: https://services.gradle.org/distributions/gradle-{version}-$(download_type).zip.sha256
+custom_arch_enabled: false
+custom_bin_paths: bin
+custom_non_stable_version: (-src|-dev|-latest|-stm|[-\.]rc|-alpha|-beta|[-\.]pre|-next|snapshot|master)
+custom_os_enabled: false
+custom_require_commands: java
+download_url: https://services.gradle.org/distributions/gradle-{version}-$(download_type).zip
+gpg_enabled: false
+install_map_enabled: false
+package_enabled: false
+plugin_author: Kamontat Chantrachirathumrong
+plugin_name: asdf-gradle
+plugin_org: kc-workspace
+plugin_repo: https://github.com/kc-workspace/asdf-gradle.git
+source_enabled: false
+test_cmd_args: --version
+version_file_enabled: false
+version_prefix: v
