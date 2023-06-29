@@ -1,13 +1,13 @@
 ---
 ## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v1.3.3-45-g23de9b4
+_commit: v1.3.3-45-ga99d232
 _src_path: /Users/kamontat/Desktop/Personal/asdf-plugin-template
 app_desc: Accelerate java developer productivity
 app_name: gradle
 app_repo: https://github.com/gradle/gradle
 app_website: https://gradle.org/
-archive_conf_path: gradle-{version}-$(download_type)
-archive_conf_strip: 0
+archive_conf_path: ''
+archive_conf_strip: 1
 archive_enabled: true
 archive_regex: (\.tar\.gz|\.tgz|\.zip)$
 checksum_conf_algorithm: 256
