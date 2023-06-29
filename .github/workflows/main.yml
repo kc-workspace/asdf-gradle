@@ -13,6 +13,7 @@ concurrency:
 
 env:
   DEFAULT_BRANCH: main
+  DEBUG: 1
 
 jobs:
   spellcheck:
