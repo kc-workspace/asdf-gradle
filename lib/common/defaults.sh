@@ -188,7 +188,7 @@ kc_asdf_extract() {
   kc_asdf_exec tar -xzf \
     "$input" \
     -C "$output" \
-    --strip-components "1"
+    --strip-components "0"
 }
 
 ## Unpack package file
