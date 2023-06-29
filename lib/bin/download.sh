@@ -92,7 +92,7 @@ __asdf_bin() {
     kc_asdf_step "extract" "$outpath" \
       kc_asdf_extract "$tmppath" "$outpath" ||
       return 1
-    tmppath="$(kc_asdf_template "$outpath/gradle-{version}-$(download_type)" "${vars[@]}")"
+    tmppath="$(kc_asdf_template "$outpath/gradle-{version}" "${vars[@]}")"
     outpath="$outdir"
     kc_asdf_step "transfer" "$outpath" \
       kc_asdf_transfer "move" "$tmppath" "$outpath" ||
