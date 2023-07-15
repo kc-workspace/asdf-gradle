@@ -11,16 +11,21 @@
 #   return 0
 # }
 
+_kc_asdf_custom_version() {
+  local version="$1"
+  printf "%s" "$version" | sed "s|.0$||"
+}
+
 ## Custom logic to update checksum file
 _kc_asdf_custom_checksum() {
+  ## create function (create "<filename>" "<checksum>")
+  local create="$1"
   ## filename is app file to check
-  local filename="$1"
+  local filename="$2"
   ## checksum_tmp is a raw checksum file from url
-  local checksum_tmp="$2"
-  ## checksum_path is a output normalize checksum file
-  local checksum_path="$3"
+  local checksum_tmp="$3"
 
-  echo "$(cat "$checksum_tmp")  $filename" >"$checksum_path"
+  "$create" "$filename" "$(cat "$checksum_tmp")"
 }
 
 ## -----------------------
