@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/kc-workspace/asdf-gradle/compare/v1.0.0...v1.0.1) (2024-03-04)
+
+
+### Performance Improvements
+
+* update plugin from template [autocommit] ([da43331](https://github.com/kc-workspace/asdf-gradle/commit/da4333194bf72eb7ca76543c2be50d96c7ecb368))
+* update plugin from template [autocommit] ([37b7ca5](https://github.com/kc-workspace/asdf-gradle/commit/37b7ca5975412b76204870e56b7e0138f6cc820b))
+
 ## 1.0.0 (2023-11-06)
 
 
